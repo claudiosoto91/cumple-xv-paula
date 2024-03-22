@@ -1,0 +1,190 @@
+:root{
+    --fuente--titulo: "Allura", cursive;
+    --fuente--texto: "Montserrat", sans-serif;
+    --blanco: #FFF4EC;
+    --violeta: #966B9D;
+    --champagne: #E7CFBC;
+    --rosa: #C98686;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+img{
+    width: 100%;
+    display: block;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(fuente--texto);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+.contenido{
+    width: min(95%, 1200px);
+    margin: auto;
+}
+.titulo{
+    font-size: 7rem;
+    color: var(--violeta);
+    font-weight: 900;
+    font-family: var(--fuente--titulo);
+    margin: 0;
+}
+.texto{
+    font-weight: 400;
+    font-family: var(--fuente--texto);
+    color: var(--violeta);
+}
+header{
+    background-color: var(--champagne);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+.contenido-txt{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenido-txt h1,
+.contenido-txt p{
+    text-align: center;
+}
+.contenido-img{
+    width: 45%;
+    background-image: url('mujer-xv.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenido-img:before{
+    content: '';
+    margin-left: -50px;
+    display: block;
+    width: 300px;
+    height: 100%;
+    background-image: url('divisor.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.flor-izq-1{
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-100vh); /* Empieza fuera de la pantalla, arriba */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+}
+.flor-izq-3{
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-100vh); /* Empieza fuera de la pantalla, arriba */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+}
+.flor-izq-2{
+    position: absolute;
+    bottom: -80px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transform: translateX(-100vh); /* Empieza fuera de la pantalla, arriba */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+}
+.mostrar-y {
+    opacity: 1;
+    transform: translateY(0); /* Mueve el elemento a su posición final */
+}
+.mostrar-x {
+    opacity: 1;
+    transform: translateX(0); /* Mueve el elemento a su posición final */
+}
+.contador{
+    font-size: 2.4rem;
+    color: #C98686;
+}
+@media screen and (max-width: 768px) {
+    header{
+        flex-direction: column;
+        width: 100%;
+    }
+    .titulo{
+        font-size: 3.8rem;
+    }
+    .contenido-txt{
+        padding: 5rem;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contenido-img{
+        width: 100%;
+        height: 50vh;
+
+    }
+    .contenido-img:before{
+        content: '';
+        margin-top: -50px;
+        margin-left: 0;
+        display: block;
+        width: 100%;
+        height: 300px;
+        background-image: url('divisor-h.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .flor-izq-1{
+        width: 100px;
+        height: 100px;
+        top: -30px;
+        left: -20px;
+    }
+    .flor-izq-2{
+        width: 100px;
+        height: 100px;
+        bottom: -30px;
+        left: -20px;
+    }
+    .flor-izq-3{
+        width: 100px;
+        height: 100px;
+        top: -20px;
+        right: -20px;
+    }
+}
+
