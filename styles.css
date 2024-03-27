@@ -284,6 +284,7 @@ main {
     position: relative;
     padding: 2rem 0;
     background-color: var(--rosa);
+    margin-top: 3rem;
 }
 
 .dress-code-titulo {
@@ -299,6 +300,10 @@ main {
 .dress-code-flex {
     display: flex;
     justify-content: center;
+    max-height: 30rem;
+}
+.dress-code-img{
+    max-width: 30rem;
 }
 
 /* Seccion Galeria */
@@ -675,4 +680,5 @@ main {
         width: 4rem;
         height: 4rem;
     }
+    
 }
