@@ -2,9 +2,11 @@ window.addEventListener("load", function() {
     var florUno = document.querySelector('.flor-izq-1');
     var florDos = document.querySelector('.flor-izq-2');
     var florTres = document.querySelector('.flor-izq-3');
+    var florCuatro = document.querySelector('.flor-izq-4');
     florUno.classList.add('mostrar-y');
     florDos.classList.add('mostrar-x');
     florTres.classList.add('mostrar-y');
+    florCuatro.classList.add('mostrar-x-1');
 });
 
 // Fecha objetivo para el contador de cuenta regresiva (año, mes [0-11], día, hora, minutos, segundos)
